@@ -1,0 +1,89 @@
+
+body {
+background: #00CED1 url(seo-01.jpg);
+
+    background-repeat: repeat;
+font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana,
+sans-serif;
+line-height: 1.5;
+/*background-size: cover;
+    background-attachment: scroll;*/
+}
+
+
+.container {
+margin: 0 auto;
+width: 960px;
+}
+
+article {
+background-color: #F0FFFF;
+border: 1px solid #FA8072;
+border-color: #CCC #999 #999 #CCC;
+margin-bottom: 20px;
+padding: 10px; /* espaçamento entre a borda e o título */
+}
+
+
+article h2 {
+border-bottom: 1px dashed #FF1493;
+margin: 0;
+}
+
+article img {
+border: 1px solid #FF00FF;
+float: left;
+margin: 10px 10px 0 0;
+padding: 2px;
+width: 160px;
+height: 160px;
+}
+
+article a { /* mudando a cor dos links para negrito */
+color: #2C88A7;
+font-weight: bold;
+}
+
+header h1 a {
+color: #FF00FF;
+text-decoration: none;
+margin-left:250px;
+}
+
+header h1 a:hover { /* mudando a cor do link quando posicionado */
+background-color: #7E9F19;
+color: #FFF;
+}
+
+.clear { /* para a imagem nao "ficar fora" quando usa o float */
+clear: both;
+}
+
+footer {
+font-size: 12px;
+text-align: center;
+}
+
+section { /* para a barra lateral lista e titulo */
+float: left;
+width: 660px;
+}
+
+aside {
+background-color: #D8BFD8;
+border: 1px solid #C9BC8F;
+padding: 10px;
+float: right;
+width: 260px;
+}
+
+aside h3 {
+font-size: 14px;
+margin-top: 0;
+}
+
+aside ol {
+font-size: 12px;
+}
+
+
