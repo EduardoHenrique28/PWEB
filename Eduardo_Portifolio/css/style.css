@@ -1,0 +1,292 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    user-select: none;
+}
+
+code { font-family: 'Fira Code', monospace; }
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+section {
+    display: none;
+}
+
+#aboutMe {
+    display: contents;
+}
+
+.card-description {
+    display: grid;
+    font-style: italic;
+    color: #16161d;
+    padding: 5% 0;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bolder;
+}
+
+.card {
+    color: black;
+    display: grid;
+    width: 85%;
+    padding: 5%;
+    margin: 5%;
+    align-self: center;
+    align-content: center;
+    background-color: white;
+    border: 3px solid white;
+    outline: 2px solid #DA70D6;
+}
+
+.octicon {
+    font-size: 4vh;
+    margin-left: 10px;
+}
+
+#Github > .card {
+    background-color: rgba(255, 255, 255, 0.80);
+    filter: saturate(0%);
+}
+
+.contrib-column.table-column, .float-left {
+    display: none;
+}
+
+.calendar {
+    min-height: 100%;
+    filter: saturate(0%);
+}
+
+.card-description > img {
+    justify-self: center;
+    max-width: 100%;
+    padding-bottom: 15px;
+}
+
+#curriculum > iframe {
+    width: 100%;
+    height: 100%;
+}
+/*-------------------------------------------------------------------------------*/
+                                    /* phone */
+/*-------------------------------------------------------------------------------*/
+@media only screen and (max-device-width: 900px) {
+    body {
+        font-family: 'Fira Code', monospace;
+    }
+
+    .menuIcon {
+        display: inline;
+    }
+
+    .menuText, #themeImage {
+        display: none;
+    }
+
+    #main {
+        display: grid;
+        grid-template-rows: 10% 80% 10%;
+        grid-template-areas: "titleBar"
+        "viewer"
+        "topBar";
+        width: 100%;
+        height: 100%;
+    }
+
+    #titleBar {
+        background-color: #16161d;
+        color: white;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    #scrollMenu {
+        display: flex;
+        justify-content: space-evenly;
+        grid-area: scrollMenu;
+        width: 100%;
+        overflow: auto;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+    }
+
+    #scrollMenu>li {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    #profile {
+        grid-area: topBar;
+        background-color: black;
+        color: white;
+    }
+
+    #menu {
+        display: grid;
+        grid-template-rows: 30% 70%;
+        grid-template-areas: "nick"
+            "scrollMenu";
+        height: 100%;
+        background-color: #FA8072 ;
+        align-items: flex-start;
+    }
+
+    #viewer {
+        grid-area: viewer;
+        background-color: white;
+        display: grid;
+        justify-items: center;
+        overflow: auto;
+    }
+
+    .card-links {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    li .octicon-mark-github {
+        font-size: 5vh;
+    }
+
+    #nick,
+    #name, #profile>a, #info {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------- */
+/* desktop */
+@media only screen and (min-device-width: 900px) {
+
+    .menuIcon, #LIGithub, #titleBar {
+        display: none;
+    }
+
+    .menuText {
+        display: inline;
+    } 
+
+    #name {
+        color: #16161d;
+        background-color: whitesmoke;
+    }
+
+    #main {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 50% 50%;
+    }
+
+    #profile {
+        background-color: #FA8072;
+        color: white;
+        display: grid;
+    }
+
+    #themeImage {
+        max-height: 55%;
+        position: fixed;
+        margin: 12% 0 0 7%;
+    }
+
+    #menu {
+        height: 200px;
+        width: 200px;
+        border: 1px dashed lightgray;
+        display: block;
+        padding: 25px;
+    }
+
+    #profile-card {
+        display: block;
+        height: 200px;
+        width: 200px;
+        border: 5px solid #00FF00;
+        padding: 25px;
+        align-self: center;
+        justify-self: center;
+        z-index: 1;
+    }
+
+    #viewer {
+        background-color: white;
+        display: grid;
+        justify-items: center;
+        overflow: auto;
+        border-left: dashed 1px black;
+        outline: solid white;
+    }
+
+    li:hover {
+        background-color: white;
+        color: black;
+        transition: 0.5s;
+    }
+
+    #profile > a {
+        position: absolute;
+        top: 80%;
+        left: 23%;
+    }
+
+    #info {
+        color: white;
+        transform: rotate(270deg);
+        position: absolute;
+        top: 50%;
+        left: 33%;
+        right: 46%;
+        letter-spacing: 9px;
+        width: 30%;
+        text-align: center;
+    }
+
+    .card-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    @keyframes pulse {
+        0% {
+            border-style: solid;
+            box-shadow: 0 0 100px var(--sat1)
+        }
+        5% {
+            border-style: dashed;
+            box-shadow: 0 0 0px var(--sat1)
+        }
+        10% {
+            border-style: solid;
+            box-shadow: 0 0 80px var(--sat1)
+        }
+        50% {
+            border-style: solid;
+            box-shadow: 0 0 90px var(--sat1)
+        }
+        55% {
+            border-style: dashed;
+            box-shadow: 0 0 0px var(--sat1)
+        }
+        60% {
+            border-style: solid;
+            box-shadow: 0 0 90px var(--sat1)
+        }
+        100% {
+            border-style: solid;
+            box-shadow: 0 0 100px var(--sat1)
+        }
+    }
+}

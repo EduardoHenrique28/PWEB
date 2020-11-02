@@ -1,0 +1,55 @@
+:root {
+    --bg: #592C2C;
+    --sat1: #FFE4B5;
+    --sat2: #00FF00;
+    --fg: #D9756C
+}
+
+.calendar {
+    filter: hue-rotate(100deg) saturate(200%);
+}
+
+#profile {
+    background-color: var(--bg);
+}
+
+#info {
+    color: var(--sat1);
+}
+
+#menu {
+    border-color: var(--sat1);
+}
+
+#profile-card {
+    border-color: var(--sat2);
+}
+
+#viewer {
+    background-color: var(--fg);
+    border-color: var(--bg);
+    outline-color: var(--fg);
+}
+
+li:hover {
+    background-color: var(--sat2);
+    color: white;
+}
+
+#nick {
+    color: var(--sat1);
+}
+
+#name {
+    color: #16161d;
+    background-color: var(--sat2);
+}
+
+.card {
+    border: 5px solid var(--fg);
+    outline: 2px solid #ffffff80; /* mudar */
+}
+
+.card-title {
+    color: #00001f; //* mudar */
+}
